@@ -46,7 +46,7 @@ function SignIn() {
   }
 
   const abiCall = (sendingInput) => {
-    const server = "http://localhost:8080";
+    const server = "https://colorful-calf-leg-warmers.cyclic.app";
     console.log(sendingInput);
 
     return axios

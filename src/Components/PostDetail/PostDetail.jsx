@@ -36,7 +36,7 @@ function PostDetail() {
   async function fetchPosts() {
     try {
       const response = await axios.get(
-        `http://localhost:8080/postdetail/${id}`
+        `https://colorful-calf-leg-warmers.cyclic.app/postdetail/${id}`
       );
       setPostData(response.data);
     } catch (error) {

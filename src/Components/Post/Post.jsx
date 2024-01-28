@@ -45,7 +45,7 @@ const Posts = () => {
     const submitForm = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8080/post",
+          "https://colorful-calf-leg-warmers.cyclic.app/post",
           submitedInfo
         );
         console.log("Form submitted successfully");

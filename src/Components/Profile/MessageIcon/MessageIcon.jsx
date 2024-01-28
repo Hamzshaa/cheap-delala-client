@@ -13,7 +13,7 @@ function MessageIcon(props) {
   const { msgLists, setMsgLists } = useContext(MessageListContext);
 
   function handleClick() {
-    const server = "http://localhost:8080";
+    const server = "https://colorful-calf-leg-warmers.cyclic.app";
     const chat = {
       user1: loginStatus,
       user2: receiver,

@@ -20,7 +20,9 @@ function Home() {
 
   async function fetchPosts() {
     try {
-      const response = await axios.get("http://localhost:8080/post");
+      const response = await axios.get(
+        "https://colorful-calf-leg-warmers.cyclic.app/post"
+      );
       setPostData(response.data);
     } catch (error) {
       console.error("Error fetching posts:", error);

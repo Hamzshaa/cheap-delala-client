@@ -19,7 +19,7 @@ function MessageList(props) {
   async function fetchPosts() {
     try {
       const response = await axios.get(
-        `http://localhost:8080/messages/${user1}/${user2}`
+        `https://colorful-calf-leg-warmers.cyclic.app/messages/${user1}/${user2}`
       );
 
       setMsg(response.data);

@@ -28,7 +28,7 @@ function Messages() {
   }
 
   useEffect(() => {
-    const server = "http://localhost:8080";
+    const server = "https://colorful-calf-leg-warmers.cyclic.app";
     const id = loginStatus?._id;
 
     try {
@@ -48,7 +48,7 @@ function Messages() {
   useEffect(() => {
     const user1 = selectedMsg;
     const user2 = loginStatus?._id;
-    const server = "http://localhost:8080";
+    const server = "https://colorful-calf-leg-warmers.cyclic.app";
     axios
       .get(`${server}/messages/${user1}/${user2}`)
       .then((response) => {
@@ -76,15 +76,18 @@ function Messages() {
 
     if (msg !== "") {
       axios
-        .post(`http://localhost:8080/messages/${user1}/${user2}`, {
-          user1: user1,
-          user2: user2,
-          message: {
-            text: msg,
-            time: time,
-            sender: selectedMsg,
-          },
-        })
+        .post(
+          `https://colorful-calf-leg-warmers.cyclic.app/messages/${user1}/${user2}`,
+          {
+            user1: user1,
+            user2: user2,
+            message: {
+              text: msg,
+              time: time,
+              sender: selectedMsg,
+            },
+          }
+        )
         .then((response) => {
           console.log("Message is successfully stored");
         })
@@ -112,7 +115,9 @@ function Messages() {
   }
   function handleMsgSelect(user1, user2) {
     axios
-      .get(`http://localhost:8080/messages/${user1}/${user2}`)
+      .get(
+        `https://colorful-calf-leg-warmers.cyclic.app/messages/${user1}/${user2}`
+      )
       .then((response) => {
         if (loginStatus?._id === response.data?.user1?._id) {
           setSender(response.data?.user2);

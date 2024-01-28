@@ -95,7 +95,7 @@ function SignUp() {
   }
 
   const apiCall = (userInfo) => {
-    const server = "http://localhost:8080";
+    const server = "https://colorful-calf-leg-warmers.cyclic.app";
     console.log(userInfo);
 
     return axios
